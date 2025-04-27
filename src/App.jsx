@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import tadaima from './assets/photos/tadaima.jpeg'
 import postit from './assets/photos/post-it.png'
@@ -8,20 +6,17 @@ import uspApp from './assets/work/uspGrantApp.png'
 import radiateWebsite from './assets/work/radiateSfWebsite.png'
 import yulisBar from './assets/work/yulisBarWebsite.png'
 import practicumApp from './assets/work/practicumProject.png'
-import github from './assets/icons/githubIcon.png'
-import ig from './assets/icons/instagram.svg'
-import linkedin from './assets/icons/linkedinIcon.png'
 import resume from './assets/icons/resumeIcon.png'
 
 function App() {
 
   return (
-    <>
+    <div className='bg-red-400 sm:h-500'>
       {/* Hero Section */}
-      <div className='h-screen w-full flex justify-center items-center'>
-        <div className='bg-red-200 w-[1024px] h-screen flex flex-col justify-between'>
+      <div className='bg-yellow-400 h-screen w-full flex justify-center items-center overflow-hidden'>
+        <div className=' w-[1024px] h-screen flex flex-col justify-between'>
           
-          <div >
+          <div className='scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50'>
             {/* Navbar */}
             <nav className="flex items-center justify-between py-8">
 
@@ -40,18 +35,18 @@ function App() {
           </div>
 
           {/* My Name */}
-          <div className='bg-yellow-400 flex flex-col items-center w-full'>
-            <h3 className='w-full text-right font-medium text-[28px] bg-green-200 translate-y-[70%]'>web developer and designer</h3>
-            <h1 className="text-[329px] font-medium text-white leading-none -py-5 bg-blue-200">HAIBIN</h1>
+          <div className='flex flex-col items-center w-full translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[10%] md:translate-y-[20%] sm:translate-y-[30%] scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50'>
+            <h3 className='w-full text-right font-medium text-[28px] translate-y-[70%]'>web developer and designer</h3>
+            <h1 className="text-[329px] font-medium text-white leading-none -py-5 ">HAIBIN</h1>
           </div>
 
         </div>
       </div>
 
       {/* Work Section */}
-      <div className='w-full flex flex-col justify-center items-center gap-3'>
+      <div className='bg-pink-400 w-full flex flex-col justify-center items-center gap-3 overflow-hidden'>
 
-        <div className='bg-red-200 w-[1060px] flex gap-3 justify-end'>
+        <div className='w-[1060px] flex gap-3 justify-end scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-2%] md:translate-y-[-5%] sm:translate-y-[-23%]'>
           {/* Photo and button */}
           <div className='flex flex-col gap-3 items-end'>
             <img src={tadaima} className='w-121 object-contain rounded-4xl'></img>
@@ -68,13 +63,13 @@ function App() {
         </div>
 
         {/* Radiate website and USP Grant app */}
-        <div className='bg-blue-200 w-[1060px] flex justify-center gap-3'>
+        <div className='w-[1060px] flex justify-center gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-43%] sm:translate-y-[-137%]'>
             <img src={uspApp} className='h-74 object-contain rounded-2xl'></img>
             <img src={radiateWebsite} className='h-74 object-contain rounded-2xl'></img>
         </div>
 
         {/* Yulis Bar and Practicum project */}
-        <div className='bg-blue-200 w-[1060px] flex justify-center gap-3'>
+        <div className='w-[1060px] flex justify-center gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-23%] md:translate-y-[-47%] sm:translate-y-[-143%]'>
             <img src={yulisBar} className='h-102.5 object-contain rounded-2xl'></img>
             <img src={practicumApp} className='h-102.5 object-contain rounded-2xl'></img>
         </div>
@@ -82,16 +77,17 @@ function App() {
       </div>
 
       {/* About Section */}
-      <div className='w-full flex flex-col justify-center items-center gap-3'>
+      <div className='bg-blue-400 w-full flex flex-col justify-center items-center gap-3 overflow-hidden translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-40%] sm:translate-y-[-130%]'>
+        <div className="w-[830px] border-t-5 border-dashed border-white my-6 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50"></div>
 
-        <div className="w-[830px] border-t-5 border-dashed border-white my-6"></div>
-
-        <div className='bg-red-200 w-[830px] flex gap-3'>
+        <div className=' w-[830px] flex gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-0%] md:translate-y-[-10%] sm:translate-y-[-30%]'>
           <p className='font-medium text-4xl w-500'>Hello.</p>
           <p className='font-regular text-3xl text-right'>I'm a UC Berkeley grad with a background in Electrical Engineering and Computer Science, now channeling my passion for design into building thoughtful, intuitive websites. I’m especially drawn to the intersection of technology and user experience—where creativity meets problem-solving.</p>
         </div>
+        
+        <br></br>
 
-        <div className='bg-red-200 w-[830px] flex gap-3'>
+        <div className='w-[830px] flex gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-50%] md:translate-y-[-100%] sm:translate-y-[-300%]'>
           <p className='font-medium text-2xl w-500'>Let's connect.</p>
           <div className='flex gap-3'>
             <img src={resume} className='h-15 object-contained'></img>
@@ -101,16 +97,14 @@ function App() {
           </div>
         </div>
         
-        <div className="w-[830px] border-t-5 border-dashed border-white my-6"></div>
-        
+        <div className="w-[830px] border-t-5 border-dashed border-white my-6 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-500%] md:translate-y-[-1500%] sm:translate-y-[-4500%]"></div>
       </div>
 
-      <div className='w-full flex justify-center items-center gap-3'>
-        <p className="w-[830px] font-regular text-sm">© 2025 All rights reserved</p>
+      {/* Footer Section */}
+      <div className='w-[full] h-[100px] flex justify-center items-start gap-3 overflow-hidden scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-57 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-140%] md:translate-y-[-310%] sm:translate-y-[-950%]'>
+        <p className="bg-green-400 w-[830px] font-extralight text-sm">© 2025 All rights reserved</p>
       </div>
-
-    
-    </>
+    </div>
   )
 }
 
