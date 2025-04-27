@@ -11,84 +11,123 @@ import resume from './assets/icons/resumeIcon.png'
 function App() {
 
   return (
-    <div className='bg-red-400 sm:h-500'>
+    <>
+    {/* Navbar */}
+    <div className='fixed w-full z-100'>
+      <div className='flex w-full justify-center'> 
+
+        <nav className="w-full flex justify-between items-center p-8 bg-black z-100">
+          {/* Logo */}
+          <div className="text-2xl font-bold">
+            <a href="/" className="font-medium text-5xl">h</a>
+          </div>
+
+          {/* Navbar links */}
+          <div className="space-x-10">
+            <a className="text-2xl hover:text-gray-400">work</a>
+            <a className="text-2xl hover:text-gray-400">about</a>
+            <a className="text-2xl hover:text-gray-400">contact</a>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <div className='sm:h-0'>
+      
       {/* Hero Section */}
-      <div className='bg-yellow-400 h-screen w-full flex justify-center items-center overflow-hidden'>
-        <div className=' w-[1024px] h-screen flex flex-col justify-between'>
-          
-          <div className='scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50'>
-            {/* Navbar */}
-            <nav className="flex items-center justify-between py-8">
+      <div className='hidden xl:block lg:block md:block sm:hidden'>
+        <div className='h-screen w-full flex justify-center items-center overflow-hidden'>
+          <div className='w-[1024px] h-full flex flex-col justify-end'>
 
-              {/* Logo */}
-              <div className="text-2xl font-bold">
-                <a href="/" className="font-medium text-5xl">h</a>
-              </div>
+            {/* My Name */}
+            <div className='flex flex-col items-center w-full 
+            translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[5%] md:translate-y-[10%] sm:translate-y-[30%] 
+            scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
+            hidden xl:block lg:block md:block sm:block'>
+              <h3 className='w-full text-right font-medium text-[28px] translate-y-[70%]'>web developer and designer</h3>
+              <h1 className="text-[324px] font-medium text-white leading-none -py-5 ">HAIBIN</h1>
+            </div>
 
-              {/* Navbar links */}
-              <div className="space-x-10">
-                <a className="text-2xl hover:text-gray-400">work</a>
-                <a className="text-2xl hover:text-gray-400">about</a>
-                <a className="text-2xl hover:text-gray-400">contact</a>
-              </div>
-            </nav>
           </div>
+      </div>
 
-          {/* My Name */}
-          <div className='flex flex-col items-center w-full translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[10%] md:translate-y-[20%] sm:translate-y-[30%] scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50'>
-            <h3 className='w-full text-right font-medium text-[28px] translate-y-[70%]'>web developer and designer</h3>
-            <h1 className="text-[329px] font-medium text-white leading-none -py-5 ">HAIBIN</h1>
-          </div>
-
-        </div>
       </div>
 
       {/* Work Section */}
-      <div className='bg-pink-400 w-full flex flex-col justify-center items-center gap-3 overflow-hidden'>
+      <div className='w-full flex flex-col justify-center items-center gap-3 overflow-hidden pt-30 xl:pt-0 lg:pt-0 md:pt-0 sm:pt-30'>
 
-        <div className='w-[1060px] flex gap-3 justify-end scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-2%] md:translate-y-[-5%] sm:translate-y-[-23%]'>
+        <div className='w-[1060px] flex gap-3 justify-center xl:justify-end lg:justify-end md:justify-end sm:justify-end 
+        xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
+        translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-2%] md:translate-y-[-5%] sm:translate-y-[-23%]'>
           {/* Photo and button */}
-          <div className='flex flex-col gap-3 items-end'>
-            <img src={tadaima} className='w-121 object-contain rounded-4xl'></img>
-            <button className='bg-black w-121 h-45 rounded-4xl shadow-lg ring-4 ring-white'>
-              <p className='text-6xl'>Let's connect!</p>
+          <div className='flex flex-col gap-3 items-center xl:items-end lg:items-end md:items-end sm:items-end'>
+            <img src={tadaima} className='w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 object-contain rounded-4xl'></img>
+            <button className='bg-black w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 
+            h-10 xl:h-45 lg:h-45 md:h-45 sm:h-45 
+            rounded-xl xl:rounded-4xl lg:rounded-4xl md:rounded-4xl sm:rounded-4xl shadow-lg 
+            ring-2 xl:ring-4 lg:ring-4 md:ring-4 sm:ring-4 ring-white'>
+              <p className='text-2xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-6xl'>Let's connect!</p>
             </button>
           </div>
 
           {/* Yu and Post-it */}
-          <div className='flex flex-col items-start'>
+          <div className='flex flex-col items-start hidden xl:block lg:block md:block: sm:block'>
             <h1 className="text-[329px] font-medium text-white leading-none">YU</h1>
             <img src={postit} className='w-87.5'></img>
           </div>
         </div>
 
         {/* Radiate website and USP Grant app */}
-        <div className='w-[1060px] flex justify-center gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-43%] sm:translate-y-[-137%]'>
-            <img src={uspApp} className='h-74 object-contain rounded-2xl'></img>
-            <img src={radiateWebsite} className='h-74 object-contain rounded-2xl'></img>
+        <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
+        scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
+        translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-43%] sm:translate-y-[-137%]'>
+            <img src={uspApp} className='h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
+            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+            object-contain rounded-2xl'></img>
+            <img src={radiateWebsite} className='h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
+            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+            object-contain rounded-2xl'></img>
         </div>
 
         {/* Yulis Bar and Practicum project */}
-        <div className='w-[1060px] flex justify-center gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-23%] md:translate-y-[-47%] sm:translate-y-[-143%]'>
-            <img src={yulisBar} className='h-102.5 object-contain rounded-2xl'></img>
-            <img src={practicumApp} className='h-102.5 object-contain rounded-2xl'></img>
+        <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
+        scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
+        translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-23%] md:translate-y-[-47%] sm:translate-y-[-143%]'>
+            <img src={yulisBar} className='h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
+            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+            object-contain rounded-2xl'></img>
+            <img src={practicumApp} className='h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
+            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+            object-contain rounded-2xl'></img>
         </div>
       
       </div>
 
       {/* About Section */}
-      <div className='bg-blue-400 w-full flex flex-col justify-center items-center gap-3 overflow-hidden translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-40%] sm:translate-y-[-130%]'>
-        <div className="w-[830px] border-t-5 border-dashed border-white my-6 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50"></div>
+      <div className='w-full flex flex-col justify-center items-center gap-3 overflow-hidden translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-40%] sm:translate-y-[-130%]'>
+        <div className="w-[220px] xl:w-[830px] lg:w-[830px] md:w-[830px] sm:w-[830px]
+        border-t-5 border-dashed border-white my-6 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50"></div>
 
-        <div className=' w-[830px] flex gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-0%] md:translate-y-[-10%] sm:translate-y-[-30%]'>
-          <p className='font-medium text-4xl w-500'>Hello.</p>
-          <p className='font-regular text-3xl text-right'>I'm a UC Berkeley grad with a background in Electrical Engineering and Computer Science, now channeling my passion for design into building thoughtful, intuitive websites. I’m especially drawn to the intersection of technology and user experience—where creativity meets problem-solving.</p>
+        <div className=' w-[830px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row 
+        items-center xl:items-start lg:items-start md:items-start sm:items-start gap-3 
+        scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
+        translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-0%] md:translate-y-[-10%] sm:translate-y-[-30%]'>
+          <p className='font-medium text-2xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl 
+          w-70 xl:w-500 lg:w-500 md:w-500 sm:w-500 
+          text-right xl:text-left lg:text-left md:text-left sm:text-left'>Hello.</p>
+          <p className='font-regular text-1xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl
+          w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto text-right'>I'm a UC Berkeley grad with a background in Electrical Engineering and Computer Science, now channeling my passion for design into building thoughtful, intuitive websites. I’m especially drawn to the intersection of technology and user experience—where creativity meets problem-solving.</p>
         </div>
         
         <br></br>
 
-        <div className='w-[830px] flex gap-3 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-50%] md:translate-y-[-100%] sm:translate-y-[-300%]'>
-          <p className='font-medium text-2xl w-500'>Let's connect.</p>
+        <div className='w-[830px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row
+        items-center xl:items-start lg:items-start md:items-start sm:items-start gap-3 
+        scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
+        translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-50%] md:translate-y-[-100%] sm:translate-y-[-300%]'>
+          <p className='font-medium text-2xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl 
+          w-70 xl:w-500 lg:w-500 md:w-500 sm:w-500'>Let's connect.</p>
           <div className='flex gap-3'>
             <img src={resume} className='h-15 object-contained'></img>
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_icon_1j2v8_1" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
@@ -97,14 +136,17 @@ function App() {
           </div>
         </div>
         
-        <div className="w-[830px] border-t-5 border-dashed border-white my-6 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-500%] md:translate-y-[-1500%] sm:translate-y-[-4500%]"></div>
+        <div className="w-[220px] xl:w-[830px] lg:w-[830px] md:w-[830px] sm:w-[830px] 
+        border-t-5 border-dashed border-white my-6 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-500%] md:translate-y-[-1500%] sm:translate-y-[-4500%]"></div>
       </div>
 
       {/* Footer Section */}
       <div className='w-[full] h-[100px] flex justify-center items-start gap-3 overflow-hidden scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-57 translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-140%] md:translate-y-[-310%] sm:translate-y-[-950%]'>
-        <p className="bg-green-400 w-[830px] font-extralight text-sm">© 2025 All rights reserved</p>
+        <p className="w-[full] xl:w-[830px] lg:w-[830px] md:w-[830px] sm:w-[full] font-extralight text-sm">© 2025 All rights reserved</p>
       </div>
+      
     </div>
+    </>
   )
 }
 
