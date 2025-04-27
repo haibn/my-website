@@ -10,23 +10,56 @@ import resume from './assets/icons/resumeIcon.png'
 
 function App() {
 
+  const handleConnectClick = () => {
+    // Scroll to the contact section
+    const contactSection = document.getElementById('contact');
+    contactSection.scrollIntoView({
+      behavior: 'smooth', // For smooth scrolling
+      block: 'start', // Aligns the section at the top of the viewport
+    });
+    
+    // Wait a little after the scroll to apply the color change
+    setTimeout(() => {
+      const icons = document.querySelectorAll('.icons');
+      const text = document.querySelector('.letsConnect')
+      
+      // Add the highlight class to change color
+      icons.forEach((icon) => {
+        icon.classList.add('highlighted');
+      });
+
+      text.classList.add('letsConnectHighlighted')
+
+      // Remove the highlight class after 2 seconds
+      setTimeout(() => {
+        text.classList.remove('letsConnectHighlighted')
+        icons.forEach((icon) => {
+          icon.classList.remove('highlighted');
+        });
+      }, 1200); // Adjust this time if needed
+    }, 800); // Delay before applying the color highlight (in milliseconds)
+  };
+
   return (
     <>
     {/* Navbar */}
     <div className='fixed w-full z-100'>
       <div className='flex w-full justify-center'> 
 
-        <nav className="w-full flex justify-between items-center p-8 bg-black z-100">
+        <nav className="w-full flex justify-between items-center p-8 bg-black">
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <a href="/" className="font-medium text-5xl">h</a>
+            <a href="#hero" className="font-medium text-5xl">h</a>
           </div>
 
           {/* Navbar links */}
           <div className="flex space-x-10">
-            <a className="hidden xl:block lg:block md:block sm:block text-2xl hover:text-gray-400">work</a>
-            <a className="hidden xl:block lg:block md:block sm:block text-2xl hover:text-gray-400">about</a>
-            <a className="text-2xl hover:text-gray-400">contact</a>
+            <a href="#work" className="cursor-pointer transition-colors duration-300 
+            hidden xl:block lg:block md:block sm:block text-2xl hover:text-gray-400">work</a>
+            <a href="#about" className="cursor-pointer transition-colors duration-300 
+            hidden xl:block lg:block md:block sm:block text-2xl hover:text-gray-400">about</a>
+            <a href="#contact" className="cursor-pointer transition-colors duration-300 
+            text-2xl hover:text-gray-400" onClick={handleConnectClick}>contact</a>
           </div>
         </nav>
 
@@ -36,7 +69,7 @@ function App() {
     <div className='sm:h-0'>
       
       {/* Hero Section */}
-      <div className='hidden xl:block lg:block md:block sm:hidden'>
+      <div id="hero" className='hidden xl:block lg:block md:block sm:hidden'>
         <div className='h-screen w-full flex justify-center items-center overflow-hidden'>
           <div className='w-[1024px] h-full flex flex-col justify-end'>
 
@@ -70,12 +103,13 @@ function App() {
             text-xs'>web developer and designer</h2>
             <h3 className='block xl:hidden lg:hidden md:hidden sm:hidden
             text-lg mb-5 text-center w-[280px]'>I turn ideas into websites that look good and actually works!</h3>
-            <button className='
+            <button id="work" className='cursor-pointer hover:bg-white hover:text-black transition-colors duration-300
             hidden xl:block lg:block md:block sm:block
             bg-black w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 
             h-10 xl:h-45 lg:h-45 md:h-45 sm:h-45 
             rounded-xl xl:rounded-4xl lg:rounded-4xl md:rounded-4xl sm:rounded-4xl shadow-lg 
-            ring-2 xl:ring-4 lg:ring-4 md:ring-4 sm:ring-4 ring-white'>
+            ring-2 xl:ring-4 lg:ring-4 md:ring-4 sm:ring-4 ring-white'
+            onClick={handleConnectClick}>
               <p className='text-2xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-6xl'>Let's connect!</p>
             </button>
           </div>
@@ -91,10 +125,12 @@ function App() {
         <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
         scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-43%] sm:translate-y-[-137%]'>
-            <img src={uspApp} className='h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
+            <img src={uspApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform
+            h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
             w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
             object-contain rounded-2xl'></img>
-            <img src={radiateWebsite} className='h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
+            <img src={radiateWebsite} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
+            h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
             w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
             object-contain rounded-2xl'></img>
         </div>
@@ -103,10 +139,12 @@ function App() {
         <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
         scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-23%] md:translate-y-[-47%] sm:translate-y-[-143%]'>
-            <img src={yulisBar} className='h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
+            <img src={yulisBar} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
+            h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
             w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
             object-contain rounded-2xl'></img>
-            <img src={practicumApp} className='h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
+            <img src={practicumApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
+            h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
             w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
             object-contain rounded-2xl'></img>
         </div>
@@ -114,7 +152,7 @@ function App() {
       </div>
 
       {/* About Section */}
-      <div className='w-full flex flex-col justify-center items-center gap-3 overflow-hidden translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-40%] sm:translate-y-[-130%]'>
+      <div id="about" className='w-full flex flex-col justify-center items-center gap-3 overflow-hidden translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-40%] sm:translate-y-[-130%]'>
         <div className="w-[220px] xl:w-[830px] lg:w-[830px] md:w-[830px] sm:w-[830px]
         border-t-5 border-dashed border-white my-6 scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50"></div>
 
@@ -131,17 +169,23 @@ function App() {
         
         <br></br>
 
-        <div className='w-[830px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row
+        <div id="contact" className='w-[830px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row
         items-center xl:items-start lg:items-start md:items-start sm:items-start gap-3 
         scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-50%] md:translate-y-[-100%] sm:translate-y-[-300%]'>
           <p className='font-medium text-2xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl 
-          w-70 xl:w-500 lg:w-500 md:w-500 sm:w-500'>Let's connect.</p>
-          <div className='flex gap-3'>
-            <img src={resume} className='h-15 object-contained'></img>
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_icon_1j2v8_1" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="_icon_1j2v8_1" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="_icon_1j2v8_1" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+          w-70 xl:w-500 lg:w-500 md:w-500 sm:w-500 letsConnect'>Let's connect.</p>
+          <div className='w-auto xl:w-300 lg:w-300 md:w-300 sm:w-300 flex justify-end gap-3'>
+            <img src={resume} className='h-15 object-contained cursor-pointer hover:scale-113 duration-500 transition-transform'></img>
+            <a href='https://www.instagram.com/haibny/' target='_blank'>
+              <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" className="icons cursor-pointer hover:text-[#4af1ff]" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+            </a>
+            <a href='https://www.linkedin.com/in/haibinyu/' target='_blank'>
+              <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" className="icons cursor-pointer hover:text-[#4af1ff]" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+            </a>
+            <a href='https://github.com/haibn' target='_blank'>
+              <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 496 512" className="icons cursor-pointer hover:text-[#4af1ff]" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+            </a>
           </div>
         </div>
         

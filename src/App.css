@@ -1,0 +1,20 @@
+.icons {
+    fill: currentColor; 
+    transition: fill 0.9s ease; 
+  }
+
+.letsConnect {
+    color: currentColor;
+    transition: color 0.9s ease; 
+}
+  
+.highlighted {
+    fill: #4af1ff ; 
+    transition: fill 0.9s ease; 
+}
+
+.letsConnectHighlighted {
+    color: #4af1ff;
+    transition: color 0.9s ease; 
+}
+  
