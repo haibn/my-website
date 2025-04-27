@@ -23,9 +23,9 @@ function App() {
           </div>
 
           {/* Navbar links */}
-          <div className="space-x-10">
-            <a className="text-2xl hover:text-gray-400">work</a>
-            <a className="text-2xl hover:text-gray-400">about</a>
+          <div className="flex space-x-10">
+            <a className="hidden xl:block lg:block md:block sm:block text-2xl hover:text-gray-400">work</a>
+            <a className="hidden xl:block lg:block md:block sm:block text-2xl hover:text-gray-400">about</a>
             <a className="text-2xl hover:text-gray-400">contact</a>
           </div>
         </nav>
@@ -57,13 +57,22 @@ function App() {
       {/* Work Section */}
       <div className='w-full flex flex-col justify-center items-center gap-3 overflow-hidden pt-30 xl:pt-0 lg:pt-0 md:pt-0 sm:pt-30'>
 
+        {/* Photo and button */}
         <div className='w-[1060px] flex gap-3 justify-center xl:justify-end lg:justify-end md:justify-end sm:justify-end 
         xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-2%] md:translate-y-[-5%] sm:translate-y-[-23%]'>
-          {/* Photo and button */}
+          
           <div className='flex flex-col gap-3 items-center xl:items-end lg:items-end md:items-end sm:items-end'>
             <img src={tadaima} className='w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 object-contain rounded-4xl'></img>
-            <button className='bg-black w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 
+            <h1 className='block xl:hidden lg:hidden md:hidden sm:hidden
+            text-[37px] font-bold'>Haibin Yu</h1>
+            <h2 className='-mt-5 block xl:hidden lg:hidden md:hidden sm:hidden
+            text-xs'>web developer and designer</h2>
+            <h3 className='block xl:hidden lg:hidden md:hidden sm:hidden
+            text-lg mb-5 text-center w-[280px]'>I turn ideas into websites that look good and actually works!</h3>
+            <button className='
+            hidden xl:block lg:block md:block sm:block
+            bg-black w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 
             h-10 xl:h-45 lg:h-45 md:h-45 sm:h-45 
             rounded-xl xl:rounded-4xl lg:rounded-4xl md:rounded-4xl sm:rounded-4xl shadow-lg 
             ring-2 xl:ring-4 lg:ring-4 md:ring-4 sm:ring-4 ring-white'>
