@@ -160,28 +160,36 @@ function App() {
         <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
         scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-43%] sm:translate-y-[-137%]'>
-            <img src={uspApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform
-            h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
-            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
-            object-contain rounded-2xl'></img>
-            <img src={radiateWebsite} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
-            h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
-            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
-            object-contain rounded-2xl'></img>
+            <a href='https://docs.google.com/presentation/d/1PVx8ZWHT-iBriBl5RabmD5pZW_4IUACll9aJ-IuAh20/edit?usp=sharing' target='_blank'>
+              <img src={uspApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform
+              h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
+              w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+              object-contain rounded-2xl'></img>
+            </a>
+            <a href='https://www.figma.com/design/RjHEHBCFYSE5b2TthglYnh/Radite-SF-Website?node-id=0-1&t=rDEhwKUpR6JWFreP-1' target='_blank'>
+              <img src={radiateWebsite} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
+              h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
+              w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+              object-contain rounded-2xl'></img>
+            </a>
         </div>
 
         {/* Yulis Bar and Practicum project */}
         <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
         scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-23%] md:translate-y-[-47%] sm:translate-y-[-143%]'>
-            <img src={yulisBar} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
-            h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
-            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
-            object-contain rounded-2xl'></img>
-            <img src={practicumApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
-            h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
-            w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
-            object-contain rounded-2xl'></img>
+            <a href='https://www.figma.com/design/aFdV7c951TkFf2ohrlasD2/Yulisbar-SF?node-id=0-1&t=83wmIl8C7N0gLC92-1' target='_blank'>
+              <img src={yulisBar} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
+              h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
+              w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+              object-contain rounded-2xl'></img>
+            </a>
+            <a href='https://www.figma.com/design/ULxHFrfHsSBr0NLDmnwWkq/BeReady-2.0?node-id=0-1&t=tsaHKMA4FSaxoVpj-1' target='_blank'>
+              <img src={practicumApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
+              h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
+              w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
+              object-contain rounded-2xl'></img>
+            </a>
         </div>
       
       </div>
@@ -211,7 +219,9 @@ function App() {
           <p className='font-medium text-2xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-4xl 
           w-70 xl:w-500 lg:w-500 md:w-500 sm:w-500 letsConnect'>Let's connect.</p>
           <div className='w-auto xl:w-300 lg:w-300 md:w-300 sm:w-300 flex justify-end gap-3'>
-            <img src={resume} className='h-15 object-contained cursor-pointer hover:scale-113 duration-500 transition-transform'></img>
+            <a href='https://drive.google.com/file/d/1ahlKLc3i591PFcUz7XlP7MIMLajAcuep/view?usp=sharing' target='_blank'>
+              <img src={resume} className='h-15 object-contained cursor-pointer hover:scale-113 duration-500 transition-transform'></img>
+            </a>
             <a href='https://www.instagram.com/haibny/' target='_blank'>
               <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" className="icons cursor-pointer hover:text-[#7eee3e]" height="4em" width="4em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
             </a>
