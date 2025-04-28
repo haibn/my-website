@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import tadaima from './assets/photos/tadaima.jpeg'
 import postit from './assets/photos/post-it.png'
@@ -7,6 +7,8 @@ import radiateWebsite from './assets/work/radiateSfWebsite.png'
 import yulisBar from './assets/work/yulisBarWebsite.png'
 import practicumApp from './assets/work/practicumProject.png'
 import resume from './assets/icons/resumeIcon.png'
+import gsap from 'gsap'
+import SplitType from 'split-type'
 
 function App() {
   const workRef = useRef();
@@ -19,43 +21,66 @@ function App() {
     })
   }
 
+  {/* Scroll and highlight contact icons */}
   const handleConnectClick = () => {
     // Scroll to the contact section
     const contactSection = document.getElementById('contact');
     contactSection.scrollIntoView({
-      behavior: 'smooth', // For smooth scrolling
-      block: 'start', // Aligns the section at the top of the viewport
+      behavior: 'smooth',
+      block: 'start',
     });
     
-    // Wait a little after the scroll to apply the color change
     setTimeout(() => {
       const icons = document.querySelectorAll('.icons');
       const text = document.querySelector('.letsConnect')
       
-      // Add the highlight class to change color
       icons.forEach((icon) => {
         icon.classList.add('highlighted');
       });
 
       text.classList.add('letsConnectHighlighted')
 
-      // Remove the highlight class after 2 seconds
       setTimeout(() => {
         text.classList.remove('letsConnectHighlighted')
         icons.forEach((icon) => {
           icon.classList.remove('highlighted');
         });
-      }, 1200); // Adjust this time if needed
-    }, 800); // Delay before applying the color highlight (in milliseconds)
+      }, 1200);
+    }, 800);
   };
+
+  {/* Animation */}
+  useEffect(() => {
+    if (window.innerWidth > 769) {
+      const haibin = new SplitType('#haibin', { types: 'chars' });
+    
+      const tl = gsap.timeline();
+    
+      tl.from('.char', {
+        y: 200,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 1.5,
+        ease: 'power3.out',
+      })
+    
+      .to(['#subtitle', '#navbar'], {
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+      });
+    }
+  }, []);
+  
 
   return (
     <>
     {/* Navbar */}
-    <div className='fixed w-full z-100'>
+    <div id='navbar' className='opacity-100 xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-100
+    fixed w-full z-100'>
       <div className='flex w-full justify-center'> 
 
-        <nav className="w-full flex justify-between items-center p-8 bg-black">
+        <nav className="w-[1050px] flex justify-between items-center p-8 bg-black">
           {/* Logo */}
           <div className="text-2xl font-bold">
             <a onClick={() => scrollToSection(heroRef)}className="font-medium text-5xl cursor-pointer">h</a>
@@ -87,8 +112,9 @@ function App() {
             translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[5%] md:translate-y-[10%] sm:translate-y-[30%] 
             scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
             hidden xl:block lg:block md:block sm:block'>
-              <h3 className='w-full text-right font-medium text-[28px] translate-y-[70%]'>web developer and designer</h3>
-              <h1 className="text-[324px] font-medium text-white leading-none -py-5 ">HAIBIN</h1>
+              <h3 id='subtitle' className='opacity-100 xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-100  
+              w-full text-right font-medium text-[28px] translate-y-[70%]'>web developer and designer</h3>
+              <h1 id="haibin" className="w-1000 text-[324px] font-medium text-white leading-none -py-5 ">HAIBIN</h1>
             </div>
 
           </div>
