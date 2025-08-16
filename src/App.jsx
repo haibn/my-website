@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import tadaima from './assets/photos/tadaima.jpeg'
+import cityhall from './assets/photos/cityhall.png'
 import postit from './assets/photos/post-it.png'
 import uspApp from './assets/work/uspGrantApp.png'
 import radiateWebsite from './assets/work/radiateSfWebsite.png'
 import yulisBar from './assets/work/yulisBarWebsite.png'
 import practicumApp from './assets/work/practicumProject.png'
+import ritWebsite from './assets/work/ritWebsite.png'
 import resume from './assets/icons/resumeIcon.png'
 import gsap from 'gsap'
 import SplitType from 'split-type'
@@ -131,7 +133,7 @@ function App() {
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-2%] md:translate-y-[-5%] sm:translate-y-[-23%]'>
           
           <div className='flex flex-col gap-3 items-center xl:items-end lg:items-end md:items-end sm:items-end'>
-            <img src={tadaima} className='w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 object-contain rounded-4xl'></img>
+            <img src={cityhall} className='w-70 xl:w-121 lg:w-121 md:w-121 sm:w-121 object-contain rounded-4xl'></img>
             <h1 className='block xl:hidden lg:hidden md:hidden sm:hidden
             text-[37px] font-bold'>Haibin Yu</h1>
             <h2 className='-mt-5 block xl:hidden lg:hidden md:hidden sm:hidden
@@ -160,7 +162,7 @@ function App() {
         <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
         scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-20%] md:translate-y-[-43%] sm:translate-y-[-137%]'>
-            <a href='https://docs.google.com/presentation/d/1PVx8ZWHT-iBriBl5RabmD5pZW_4IUACll9aJ-IuAh20/edit?usp=sharing' target='_blank'>
+            <a href='https://docs.google.com/presentation/d/1Pe83Xs3qVMzYping3CqAipRlh2I4_54aVakG1XWUBTk/edit?usp=sharing' target='_blank'>
               <img src={uspApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform
               h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
               w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
@@ -174,7 +176,7 @@ function App() {
             </a>
         </div>
 
-        {/* Yulis Bar and Practicum project */}
+        {/* Yulis Bar and RIT Website */}
         <div className='w-[1060px] flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-3 
         scale-100 xl:scale-100 lg:scale-90 md:scale-80 sm:scale-50 
         translate-y-[0%] xl:translate-y-[0%] lg:translate-y-[-23%] md:translate-y-[-47%] sm:translate-y-[-143%]'>
@@ -184,8 +186,8 @@ function App() {
               w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
               object-contain rounded-2xl'></img>
             </a>
-            <a href='https://www.figma.com/design/ULxHFrfHsSBr0NLDmnwWkq/BeReady-2.0?node-id=0-1&t=tsaHKMA4FSaxoVpj-1' target='_blank'>
-              <img src={practicumApp} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
+            <a href='https://www.figma.com/design/z007629c7sludq6kgAJu6B/RIT-Website-Redesign?node-id=359-434&t=Bqv1wSxcY8xcDPE6-1' target='_blank'>
+              <img src={ritWebsite} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
               h-auto xl:h-102.5 lg:h-102.5 md:h-102.5 sm:h-102.5 
               w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
               object-contain rounded-2xl'></img>

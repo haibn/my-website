@@ -9,11 +9,11 @@
 }
   
 .highlighted {
-    fill: #7eee3e ; 
+    fill: #26ceff ; 
     transition: fill 0.9s ease; 
 }
 
 .letsConnectHighlighted {
-    color: #7eee3e;
+    color: #26ceff;
     transition: color 0.9s ease; 
 }
