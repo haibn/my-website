@@ -168,7 +168,7 @@ function App() {
               w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
               object-contain rounded-2xl'></img>
             </a>
-            <a href='https://www.figma.com/design/RjHEHBCFYSE5b2TthglYnh/Radite-SF-Website?node-id=0-1&t=rDEhwKUpR6JWFreP-1' target='_blank'>
+            <a href='https://www.radiatesf.com/' target='_blank'>
               <img src={radiateWebsite} className='cursor-pointer hover:scale-103 duration-500 transition-transform 
               h-auto xl:h-74 lg:h-74 md:h-74 sm:h-74 
               w-70 xl:w-auto lg:w-auto md:w-auto sm:w-auto 
